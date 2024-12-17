@@ -11,7 +11,7 @@
         direction: none;
     }
     table {
-        width: 50%;
+        width: 100%;
         border-collapse: collapse;
     }
 
@@ -38,9 +38,10 @@
                 <th>ID</th>
                 <th>NAME</th>
                 <th>PHONE</th>
-                <th>Class</th>
+                <th>CLASS</th>
                 <th>DOB</th>
                 <th>STATUS</th>
+                <th>ACTIONS</th>
             </tr>
             <tbody>
                 @foreach ($students as $student)
@@ -51,6 +52,14 @@
                         <td>{{$student->class}}</td>
                         <td>{{$student->dob}}</td>
                         <td>{{$student->status}}</td>
+                        <td>
+                            <button>
+                                <a href="/students/update/{{$student->id}}">Update</a>
+                            </button>
+                            <button>
+                                <a href="/students/delete/{{$student->id}}">Delete</a>
+                            </button>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
