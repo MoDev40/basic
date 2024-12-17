@@ -18,4 +18,8 @@ class StudentController extends Controller
     {
         return view('components.create');
     }
+    public function store(Request $req)
+    {
+        dd($req);
+    }
 }
