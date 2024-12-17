@@ -29,11 +29,11 @@
             <legend>Status</legend>
             <div>
                 <label for="Active">Active</label>
-                <input type="radio" name="status" required checked>
+                <input type="radio" value="Active" name="status" required checked>
             </div>
             <div>
                 <label for="Graduated">Graduated</label>
-                <input type="radio" name="status" required>
+                <input type="radio" value="Graduated" name="status" required>
             </div>
         </fieldset>
         <button type="submit">Save</button>

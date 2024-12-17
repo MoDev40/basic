@@ -25,6 +25,7 @@ class StudentController extends Controller
             'phone' => 'required',
             'class' => 'required',
             'dob' => 'required',
+            'status' => 'nullable',
         ]);
         Student::create($data);
         return redirect('students')->with('success', 'Student has been created successfully');
