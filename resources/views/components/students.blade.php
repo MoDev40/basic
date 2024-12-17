@@ -8,6 +8,7 @@
     <style>
     *{
         margin: 5px;
+        direction: none;
     }
     table {
         width: 50%;
@@ -24,31 +25,32 @@
     th {
         background-color: #f2f2f2;
     }
-    a {
-        direction: none;
-    }
     </style>
 </head>
 <body>
     <div>
         <div>
             <h1>Students</h1>
-            <button>ADD</a></button>
+            <button><a href="/students/create">ADD</a></button>
         </div>
         <table>
             <tr>
                 <th>ID</th>
                 <th>NAME</th>
+                <th>PHONE</th>
                 <th>Class</th>
                 <th>DOB</th>
+                <th>STATUS</th>
             </tr>
             <tbody>
                 @foreach ($students as $student)
                     <tr>
                         <td>{{$student->id}}</td>
                         <td>{{$student->name}}</td>
+                        <td>{{$student->phone}}</td>
                         <td>{{$student->class}}</td>
                         <td>{{$student->dob}}</td>
+                        <td>{{$student->status}}</td>
                     </tr>
                 @endforeach
             </tbody>
