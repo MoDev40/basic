@@ -20,6 +20,13 @@ class StudentController extends Controller
     }
     public function store(Request $req)
     {
-        dd($req);
+        $data = $req->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'class' => 'required',
+            'dob' => 'required',
+        ]);
+        Student::create($data);
+        return redirect('students')->with('success', 'Student has been created successfully');
     }
 }
