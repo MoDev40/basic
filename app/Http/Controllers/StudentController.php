@@ -13,4 +13,9 @@ class StudentController extends Controller
         $students = Student::all();
         return view('components.students', ['students' => $students]);
     }
+
+    public function create()
+    {
+        return view('components.create');
+    }
 }
