@@ -11,6 +11,6 @@ class StudentController extends Controller
     public function index()
     {
         $students = Student::all();
-        return json_encode($students);
+        return view('components.students', ['students' => $students]);
     }
 }
