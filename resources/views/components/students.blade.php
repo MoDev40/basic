@@ -56,9 +56,11 @@
                             <button>
                                 <a href="/students/update/{{$student->id}}">Update</a>
                             </button>
-                            <button>
-                                <a href="/students/delete/{{$student->id}}">Delete</a>
-                            </button>
+                            <form action="/students/delete" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
