@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body class="container">
-    <form action="" method="POST">
+    <form action="{{route('students.update',$student)}}" method="POST">
         @csrf
         @method('PUT')
         <div>

@@ -54,7 +54,7 @@
                         <td>{{$student->status}}</td>
                         <td>
                             <a href="{{route('students.edit',$student)}}">
-                                <button>Update</button>
+                                <button>Edit</button>
                             </a>
                             <form action="{{route('students.destroy',$student)}}" method="POST">
                                 @csrf

@@ -59,9 +59,18 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $req, Student $student)
     {
-        //
+        $data = $req->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'class' => 'required',
+            'dob' => 'required',
+            'status' => 'required',
+        ]);
+
+        $student->update($data);
+        return redirect()->route('students.index')->with('success', 'Student has been updated successfully');
     }
 
     /**
