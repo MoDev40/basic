@@ -53,10 +53,7 @@
                         <td>{{$student->dob}}</td>
                         <td>{{$student->status}}</td>
                         <td>
-                            <button>
-                                <a href="/students/update/{{$student->id}}">Update</a>
-                            </button>
-                            <form action="/students/delete" method="POST">
+                            <form action="{{route('students.destroy',$student)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit">Delete</button>

@@ -37,7 +37,7 @@ class StudentController extends Controller
             'status' => 'nullable',
         ]);
         Student::create($data);
-        return redirect('students')->with('success', 'Student has been created successfully');
+        return redirect()->route('students.index')->with('success', 'Student has been created successfully');
     }
 
     /**
@@ -69,6 +69,7 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        $student->delete();
+        return redirect()->route('students.index')->with('success', 'Student has been deleted successfully');
     }
 }
