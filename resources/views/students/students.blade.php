@@ -31,7 +31,9 @@
     <div>
         <div>
             <h1>Students</h1>
-            <button><a href="/students/create">ADD</a></button>
+            @auth
+            <button><a href="{{route('students.create')}}">ADD</a></button>
+            @endauth
         </div>
         <table>
             <tr>
