@@ -25,3 +25,4 @@ Route::get('/register', [UserController::class, 'register'])->name('auth.registe
 Route::post('/store', [UserController::class, 'store'])->name('auth.store');
 Route::get('/login', [UserController::class, 'login'])->name('auth.login');
 Route::post('/authenticate', [UserController::class, 'authenticate'])->name('auth.authenticate');
+Route::get('/logout', [UserController::class, 'logout'])->name('auth.logout');

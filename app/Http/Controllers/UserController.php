@@ -44,4 +44,12 @@ class UserController extends Controller
             return to_route('students.index');
         }
     }
+
+    public function logout(Request $req)
+    {
+        Auth::guard('web')->logout();
+        $req->session()->invalidate();
+        $req->session()->regenerateToken();
+        return to_route('auth.login');
+    }
 }
