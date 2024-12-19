@@ -21,7 +21,6 @@
         background-color: #f2f2f2;
     }
 </style>
-<body>
     <div>
         <div>
             <h1>Students</h1>
@@ -63,5 +62,4 @@
             </tbody>
         </table>
     </div>
-</body>
 @endsection
