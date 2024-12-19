@@ -53,6 +53,9 @@
                         <td>{{$student->dob}}</td>
                         <td>{{$student->status}}</td>
                         <td>
+                            <a href="{{route('students.edit',$student)}}">
+                                <button>Update</button>
+                            </a>
                             <form action="{{route('students.destroy',$student)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
